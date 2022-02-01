@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&display=swap');
+
+* {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: #ECF0F1;
+}
+
+a {
+  cursor: pointer;
+}
+
+.app-wrapper {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  grid-template-areas: 
+  "header header"
+  "nav content";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 3fr 9fr;
+  grid-gap: 20px;
+}
+
+.app-wrapper-content {
+  grid-area: content;
+}
+
+.block {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  padding: 20px;
+}
+
+.textarea {
+  border-radius: 5px;
+  border-color: #ECF0F1;
+  border-width: 2px;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.button {
+  cursor: pointer;
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 30px;
+  transition: filter 0.1s;
+}
+
+.button--primary {
+  background: rgb(43, 57, 255);
+  color: #fff;
+}
+
+.button--success {
+  background: #4BB543;
+  color: #fff;
+}
+
+.button:hover {
+  filter: saturate(70%);
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #000;
+}
+
+.navbar .active {
+  color: #fff;
+  background: rgb(43, 57, 255);
+  box-shadow: rgba(90, 135, 180, 0.6) 0px 8px 24px;
+}

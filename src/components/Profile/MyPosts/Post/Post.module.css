@@ -1,0 +1,25 @@
+.post {
+    display: flex;
+    /* align-items: center; */
+    padding: 10px 0;
+}
+
+.post__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.post__content {
+    padding-left: 10px;
+}
+
+.post__name {
+    padding-bottom: 2px;
+    color: rgb(43, 57, 255);
+}
+
+
+.like__icon {
+    margin-right: 5px;
+}

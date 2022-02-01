@@ -1,0 +1,9 @@
+.nav {
+    grid-area: nav;
+}
+
+.nav__item {
+    display: flex;
+    border-radius: 50px;
+    padding: 15px 10px;
+}

@@ -1,0 +1,14 @@
+.post__add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.post__textarea {
+    flex-basis: 100%;
+    height: 100px;
+}
+
+.post__button {
+    margin-top: 20px;
+}
