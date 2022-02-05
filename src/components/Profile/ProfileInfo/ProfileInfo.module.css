@@ -7,3 +7,7 @@
     max-height: 400px;
     object-fit: cover;
 }
+
+.userInfoContent {
+    margin-left: 20px;
+}

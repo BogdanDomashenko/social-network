@@ -1,7 +1,8 @@
 import s from './ProfileInfo.module.css';
 
+import userPhoto from "../../../assets/images/default.jpg";
+
 const ProfileInfo = (props) => {
-    debugger;
     if (!props.profile) return ( <div>No data</div> );
     
     const {
@@ -12,13 +13,16 @@ const ProfileInfo = (props) => {
 
     const contactsKeys = Object.keys(contacts);
 
+    photos.large = photos.large || userPhoto;
+    photos.small = photos.small || userPhoto;
+
     return (
         <div>
             <div className={s.userInfo}>
                 <div>
                     <img className={s.profile__img} src={photos.large} alt="" />
                 </div>
-                <div>
+                <div className={s.userInfoContent}>
                     <h1 className={s.userName}>{fullName}</h1>
                     <div>{aboutMe}</div>
                     <div>Описание: {lookingForAJobDescription}</div>
@@ -26,14 +30,14 @@ const ProfileInfo = (props) => {
                     <div>
                         Соцсети:
                         { contactsKeys.map(key => {
-                        if(contacts[key]) return (
-                            <div>
-                                <a href={contacts[key]}>
-                                    {key}: {contacts[key]}
-                                </a>
-                            </div>
-                        )
-                    }) }
+                            if(contacts[key]) return (
+                                <div>
+                                    <a href={contacts[key]}>
+                                        {key}: {contacts[key]}
+                                    </a>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
